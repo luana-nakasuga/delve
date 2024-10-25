@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9559e824-b11e-4203-ac5c-7c598293725b" name="Changes" comment="feat: first version of the project">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/Vulnerability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/VulnerabilityLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/target/CsrfTarget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/target/Target.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: first version of the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: first version of the project" />
+  </component>
+</project>
