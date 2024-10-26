@@ -4,10 +4,12 @@ public abstract class Target {
 
     protected final String vulnerabilityName;
     protected final String[] targets;
+    protected final String[] potentialVul;
 
-    protected Target(String vulnerabilityName, String[] targets) {
+    protected Target(String vulnerabilityName, String[] targets, String[] potentialVul) {
         this.vulnerabilityName = vulnerabilityName;
         this.targets = targets;
+        this.potentialVul = potentialVul;
     }
 
     public String getVulnerabilityName() {
@@ -17,4 +19,9 @@ public abstract class Target {
     public String[] getTargets() {
         return targets;
     }
+
+    public String[] getPotentialVul() {
+        return potentialVul;
+    }
+
 }
