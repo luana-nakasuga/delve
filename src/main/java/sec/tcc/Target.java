@@ -1,4 +1,4 @@
-package sec.tcc.target;
+package sec.tcc;
 
 public abstract class Target {
 

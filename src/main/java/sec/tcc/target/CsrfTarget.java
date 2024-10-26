@@ -1,10 +1,11 @@
 package sec.tcc.target;
 
-public class CsrfTarget extends Target{
+import sec.tcc.Target;
 
+public class CsrfTarget extends Target {
 
     public CsrfTarget() {
-        super("Csrf", new String[] {"csrf"});
+        super("Csrf", new String[] {"csrf", "configuration"});
     }
 
 }

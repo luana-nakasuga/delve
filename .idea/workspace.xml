@@ -5,38 +5,165 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9559e824-b11e-4203-ac5c-7c598293725b" name="Changes" comment="feat: first version of the project">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/Vulnerability.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/VulnerabilityLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/target/CsrfTarget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/target/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/target/SqlInjectionTarget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sec/tcc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sec/tcc/Vulnerability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/Vulnerability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sec/tcc/VulnerabilityLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sec/tcc/target/CsrfTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/target/CsrfTarget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sec/tcc/target/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sec/tcc/Target.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;oLuizGuilherme&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:luana-nakasuga/delve.git&quot;,
+    &quot;accountId&quot;: &quot;8a7065c2-1526-4782-a278-2dded97305de&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2nulScDhbEST5gnExyDcjmu2Snn" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "main",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Teste.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.delv-core [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.delv-core [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sec.tcc.target" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sec.tcc.Main" />
+      <module name="delv-core" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\Luiz Batata 182\Documents\Estudos\oPontoFinal-app\oPontoFinal\src&quot;" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sec.tcc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sec.tcc.Teste" />
+      <module name="delv-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sec.tcc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Teste" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="feat: first version of the project">
+      <option name="closed" value="true" />
+      <created>1729817987223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729817987223</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9559e824-b11e-4203-ac5c-7c598293725b" name="Changes" comment="feat: first version of the project" />
+      <created>1729830846747</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729830846747</updated>
+      <workItem from="1729830848167" duration="727000" />
+      <workItem from="1729833635938" duration="138000" />
+      <workItem from="1729868288886" duration="8000" />
+      <workItem from="1729892243859" duration="5583000" />
+      <workItem from="1729907476299" duration="82000" />
+      <workItem from="1729948797476" duration="4004000" />
+      <workItem from="1729965259353" duration="4275000" />
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: first version of the project" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: first version of the project" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sec/tcc/Main.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

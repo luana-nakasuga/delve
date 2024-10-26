@@ -1,59 +1,88 @@
 package sec.tcc;
 
+import org.reflections.Reflections;
+import org.reflections.util.ConfigurationBuilder;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.*;
 
 public class Main {
+
+    private static String[] ignoreList = new String[] {"import"};
+
     public static void main(String[] args) {
-        String directory = "";
-        String word = "";
-        if (args.length != 1) {
-            directory = args[0];
-            word = "csrf";
+        String directoryPath = "";
+        if (args.length != 0) {
+            directoryPath = args[0];
         } else {
-            System.out.println("The directory and word parameters must be provided.");
+            System.out.println("The directoryPath and word parameters must be provided.");
             return;
         }
 
-        File pasta = new File(directory);
+        File directory = new File(directoryPath);
+        String[] allTargets = getAllTargets();
 
-        if (pasta.exists() && pasta.isDirectory()) {
-            searchFiles(pasta, word);
+        if (directory.exists() && directory.isDirectory()) {
+            searchFiles(directory, allTargets);
         } else {
             System.out.println("Directory not found or invalid.");
         }
     }
 
-    public static void searchFiles(File directory, String word) {
+    public static void searchFiles(File directory, String[] allTargets) {
         File[] files = directory.listFiles();
 
         if (files != null) {
             for (File file : files) {
                 if (file.isDirectory()) {
-                    searchFiles(file, word);
+                    searchFiles(file, allTargets);
                 } else if (file.isFile()) {
-                    searchWordInFile(file, word);
+                    searchWordInFile(file, allTargets);
                 }
             }
         }
     }
 
-    public static void searchWordInFile(File file, String word) {
+    public static void searchWordInFile(File file, String[] allTargets) {
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
             int lineCount = 1;
 
             while ((line = br.readLine()) != null) {
-                if (line.toLowerCase().contains(word)) {
-                    System.out.println(new Vulnerability(lineCount, file.getName(), line.trim(), VulnerabilityLevel.HIGH).report());
+                if (Arrays.stream(allTargets).anyMatch(line.toLowerCase()::contains) &&
+                        Arrays.stream(ignoreList).noneMatch(line.toLowerCase()::contains)) {
+                    System.out.println(new Vulnerability(lineCount, file.getName(), line.trim()).report());
                 }
                 lineCount++;
             }
         } catch (IOException e) {
-            System.out.println("Error reading the file " + file.getName() + ": " + e.getMessage());
+            System.out.printf("Error reading the file %s: %s", file.getName(), e.getMessage());
         }
+    }
+
+    public static String[] getAllTargets() {
+        String packageName = "sec.tcc";
+        Reflections reflections = new Reflections(new ConfigurationBuilder().forPackage(packageName));
+        Set<Class<? extends Target>> classes = reflections.getSubTypesOf(Target.class);
+        List<String> targetedWords = new ArrayList<>();
+
+        for (Class<? extends Target> clazz : classes) {
+            try {
+                Target instance = clazz.getDeclaredConstructor().newInstance();
+
+                Method method = clazz.getMethod("getTargets");
+                Collections.addAll(targetedWords, (String[]) method.invoke(instance));
+            } catch (Exception e) {
+                System.out.println("Error calling getTargets in " + clazz.getSimpleName() + ": " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+
+        return targetedWords.toArray(new String[0]);
     }
 
 }
