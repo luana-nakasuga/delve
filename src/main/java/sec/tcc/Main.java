@@ -10,10 +10,12 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
-    private static String[] ignoreList = new String[]{"import"};
+    private static final String[] ignoreList = new String[]{"import"};
 
     public static void main(String[] args) {
         System.setProperty("org.slf4j.simpleLogger.log.org.reflections", "off");
@@ -58,11 +60,14 @@ public class Main {
                 String lowerLine = line.toLowerCase();
 
                 if (Arrays.stream(targetedWords).anyMatch(lowerLine::contains) &&
-                        Arrays.stream(ignoreList).noneMatch(lowerLine::contains) &&
-                        Arrays.stream(target.getPotentialVul()).anyMatch(lowerLine::contains)) {
-                    Vulnerability vulnerability = new Vulnerability(lineCount, file.getName(), line.trim());
-                    System.out.println(vulnerability.report());
-                    System.out.println(target.getVulnerabilityName());
+                        Arrays.stream(ignoreList).noneMatch(lowerLine::contains) ) {
+                    Pattern[] patterns = target.getCompiledVulRegex();
+                    for (Pattern pattern : patterns) {
+                        Matcher matcher = pattern.matcher(line);
+                        if (matcher.find()) {
+                            System.out.println(new Vulnerability(lineCount, file.getName(), line.trim()).report(target.getVulnerabilityName()));
+                        }
+                    }
                 }
 
                 lineCount++;
