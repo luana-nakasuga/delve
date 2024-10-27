@@ -6,9 +6,9 @@ import java.util.regex.Pattern;
 
 public abstract class Target {
 
-    protected final String vulnerabilityName;
-    protected final String[] targets;
-    protected final String[] potentialVulRegex;
+    private final String vulnerabilityName;
+    private final String[] targets;
+    private final String[] potentialVulRegex;
 
     protected Target(String vulnerabilityName, String[] targets, String[] potentialVulRegex) {
         this.vulnerabilityName = vulnerabilityName;

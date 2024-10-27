@@ -24,7 +24,7 @@ public class Main {
         if (args.length != 0) {
             directoryPath = args[0];
         } else {
-            System.out.println("The directoryPath and word parameters must be provided.");
+            System.out.println("The directoryPath parameter must be provided.");
             return;
         }
 
