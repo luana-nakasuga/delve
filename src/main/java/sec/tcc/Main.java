@@ -18,6 +18,7 @@ public class Main {
     private static final String[] ignoreList = new String[]{"import"};
 
     public static void main(String[] args) {
+        long l = System.currentTimeMillis();
         System.setProperty("org.slf4j.simpleLogger.log.org.reflections", "off");
 
         String directoryPath = "";
@@ -35,6 +36,8 @@ public class Main {
         } else {
             System.out.println("Directory not found or invalid.");
         }
+
+        System.out.println(System.currentTimeMillis() - l);
     }
 
     public static void searchFiles(File directory) {
